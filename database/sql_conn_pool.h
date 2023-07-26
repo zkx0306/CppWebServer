@@ -1,3 +1,5 @@
+#define SQL_CONN_POOL_H
+
 #include <stdio.h>
 #include <list>
 #include <mysql/mysql.h>
@@ -5,7 +7,8 @@
 #include <string.h>
 #include <iostream>
 #include <string>
-#include "../lock/locker.h"
+
+#include "../util/locker.h"
 
 using namespace std;
 
