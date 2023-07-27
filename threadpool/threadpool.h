@@ -4,7 +4,6 @@
 #include <pthread.h>
 #include <list>
 #include <cstdio>
-
 #include "../util/locker.h"
 #include "../database/sql_conn_pool.h"
 

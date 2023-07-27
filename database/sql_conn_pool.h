@@ -7,7 +7,6 @@
 #include <string.h>
 #include <iostream>
 #include <string>
-
 #include "../util/locker.h"
 
 using namespace std;
