@@ -1,4 +1,4 @@
-#define HTTPCONNECTION_H
+#define HTTP_CONN_H
 
 #include <unistd.h>
 #include <signal.h>
