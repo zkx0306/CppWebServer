@@ -241,7 +241,7 @@ http_conn::HTTP_CODE http_conn::parse_request_line(char *text)
         return BAD_REQUEST;
     //当url为/时，显示判断界面
     if (strlen(m_url) == 1)
-        strcat(m_url, "judge.html");
+        strcat(m_url, "home.html");
     m_check_state = CHECK_STATE_HEADER;
     return NO_REQUEST;
 }
@@ -402,7 +402,7 @@ http_conn::HTTP_CODE http_conn::do_request()
                 m_lock.unlock();
 
                 if (!res)
-                    strcpy(m_url, "/log.html");
+                    strcpy(m_url, "/login.html");
                 else
                     strcpy(m_url, "/registerError.html");
             }
@@ -416,7 +416,7 @@ http_conn::HTTP_CODE http_conn::do_request()
             if (users.find(name) != users.end() && users[name] == password)
                 strcpy(m_url, "/welcome.html");
             else
-                strcpy(m_url, "/logError.html");
+                strcpy(m_url, "/loginError.html");
         }
     }
 
@@ -431,31 +431,7 @@ http_conn::HTTP_CODE http_conn::do_request()
     else if (*(p + 1) == '1')
     {
         char *m_url_real = (char *)malloc(sizeof(char) * 200);
-        strcpy(m_url_real, "/log.html");
-        strncpy(m_real_file + len, m_url_real, strlen(m_url_real));
-
-        free(m_url_real);
-    }
-    else if (*(p + 1) == '5')
-    {
-        char *m_url_real = (char *)malloc(sizeof(char) * 200);
-        strcpy(m_url_real, "/picture.html");
-        strncpy(m_real_file + len, m_url_real, strlen(m_url_real));
-
-        free(m_url_real);
-    }
-    else if (*(p + 1) == '6')
-    {
-        char *m_url_real = (char *)malloc(sizeof(char) * 200);
-        strcpy(m_url_real, "/video.html");
-        strncpy(m_real_file + len, m_url_real, strlen(m_url_real));
-
-        free(m_url_real);
-    }
-    else if (*(p + 1) == '7')
-    {
-        char *m_url_real = (char *)malloc(sizeof(char) * 200);
-        strcpy(m_url_real, "/fans.html");
+        strcpy(m_url_real, "/login.html");
         strncpy(m_real_file + len, m_url_real, strlen(m_url_real));
 
         free(m_url_real);
