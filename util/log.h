@@ -1,3 +1,4 @@
+#ifndef LOG_H
 #define LOG_H
 
 #include <stdio.h>
@@ -64,3 +65,5 @@ private:
 #define LOG_INFO(format, ...) Log::get_instance()->write_log(1, format, ##__VA_ARGS__)
 #define LOG_WARN(format, ...) Log::get_instance()->write_log(2, format, ##__VA_ARGS__)
 #define LOG_ERROR(format, ...) Log::get_instance()->write_log(3, format, ##__VA_ARGS__)
+
+#endif

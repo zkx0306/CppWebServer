@@ -1,3 +1,4 @@
+#ifndef SQL_CONN_POOL_H
 #define SQL_CONN_POOL_H
 
 #include <stdio.h>
@@ -54,3 +55,5 @@ private:
 	MYSQL *conRAII;
 	connection_pool *poolRAII;
 };
+
+#endif

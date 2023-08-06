@@ -1,3 +1,4 @@
+#ifndef TIMER_H
 #define TIMER_H
 
 #include <time.h>
@@ -171,3 +172,5 @@ private:
     util_timer *head;
     util_timer *tail;
 };
+
+#endif

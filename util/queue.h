@@ -1,3 +1,4 @@
+#ifndef QUEUE_H
 #define QUEUE_H
 
 #include <iostream>
@@ -202,3 +203,5 @@ private:
     int m_front;
     int m_back;
 };
+
+#endif

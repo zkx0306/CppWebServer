@@ -1,3 +1,4 @@
+#ifndef LOCKER_H
 #define LOCKER_H
 
 #include <exception>
@@ -110,3 +111,5 @@ public:
 private:
     pthread_cond_t m_cond;
 };
+
+#endif

@@ -1,3 +1,4 @@
+#ifndef HTTP_CONN_H
 #define HTTP_CONN_H
 
 #include <unistd.h>
@@ -131,3 +132,5 @@ private:
     int bytes_to_send;
     int bytes_have_send;
 };
+
+#endif
